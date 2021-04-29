@@ -11,6 +11,4 @@ class Screen():
 
   def capture(self):
     img = np.array(ImageGrab.grab(bbox=(self.x, self.y, self.width, self.height)))
-    frame = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-    return frame
+    return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
