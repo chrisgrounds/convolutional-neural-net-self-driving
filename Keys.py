@@ -11,7 +11,7 @@ class Keys():
     elif keyboard.is_pressed("d"):
       return "D"
     else:
-      return None
+      return "W"
 
   def convert_to_feature_set(self, key):
     if key == "A":
