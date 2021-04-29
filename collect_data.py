@@ -43,7 +43,7 @@ def main():
       
       training_data.append([frame, feature_set])
 
-      if len(training_data) >= 200:
+      if len(training_data) >= 50:
           np.save(TRAINING_DATA_FILE, training_data)
           iteration = iteration + len(training_data)
           print('[{}] training data saved'.format(iteration))
@@ -61,9 +61,8 @@ def main():
   df = np.load(TRAINING_DATA_FILE, allow_pickle=True)
   df = pd.DataFrame(df)
 
-  print(df.head())
+  print(df)
 
   cv2.destroyAllWindows()
-
 
 main()
