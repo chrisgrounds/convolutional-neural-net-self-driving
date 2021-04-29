@@ -1,7 +1,14 @@
 from Screen import Screen
+from json import load
+from time import sleep
 
 def main():
-  screen = Screen(0, 40, 800, 640)
+  with open('data.json') as data_file:
+    config = load(data_file)
+
+  sleep(config["delay"])
+
+  screen = Screen(config["x"], config["y"], config["width"], config["height"])
   screen.capture()
 
 main()
