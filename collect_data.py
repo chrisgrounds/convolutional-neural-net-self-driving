@@ -33,8 +33,6 @@ def main():
     if key_press:
       feature_set = keys.convert_to_feature_set(key_press)
     
-    print(feature_set)
-
     training_data.append([screen, feature_set])
 
     if len(training_data) % 100 == 0:
