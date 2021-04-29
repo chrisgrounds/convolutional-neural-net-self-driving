@@ -3,5 +3,6 @@
   "y": 40,
   "width": 800,
   "height": 640,
-  "delay": 0.3
+  "delay": 0.3,
+  "training_data_file": "training_data.npy"
 }
